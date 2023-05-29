@@ -6,6 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+
 class SFlashCommand extends Command
 {
     // public $signature = 'sflash';
@@ -20,6 +21,7 @@ class SFlashCommand extends Command
     // }
 
     use ConfirmableTrait;
+
     /**
      * The console command name.
      *
@@ -41,9 +43,9 @@ class SFlashCommand extends Command
      */
     public function handle()
     {
-        if ($this->ask("Do You really want to run this command?")) {
+        if ($this->ask('Do You really want to run this command?')) {
             $driver = config('session.driver');
-            $method_name = 'clean' . ucfirst($driver);
+            $method_name = 'clean'.ucfirst($driver);
             if (method_exists($this, $method_name)) {
                 try {
                     $this->$method_name();
@@ -56,6 +58,7 @@ class SFlashCommand extends Command
             }
         }
     }
+
     //file
     protected function cleanFile()
     {
@@ -65,11 +68,12 @@ class SFlashCommand extends Command
         $files = scandir($directory);
 
         foreach ($files as $file) {
-            if (!in_array($file, $ignoreFiles)) {
-                unlink($directory . '/' . $file);
+            if (! in_array($file, $ignoreFiles)) {
+                unlink($directory.'/'.$file);
             }
         }
     }
+
     //database
     protected function cleanDatabase()
     {
