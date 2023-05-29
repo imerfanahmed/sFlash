@@ -2,9 +2,9 @@
 
 namespace Eru\SFlash\Tests;
 
+use Eru\SFlash\SFlashServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Eru\SFlash\SFlashServiceProvider;
 
 class TestCase extends Orchestra
 {

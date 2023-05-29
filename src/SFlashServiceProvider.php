@@ -2,9 +2,9 @@
 
 namespace Eru\SFlash;
 
+use Eru\SFlash\Commands\SFlashCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Eru\SFlash\Commands\SFlashCommand;
 
 class SFlashServiceProvider extends PackageServiceProvider
 {
