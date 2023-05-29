@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Eru\SFlash\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class SFlashCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'sflash';
 
     public $description = 'My command';
 
