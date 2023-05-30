@@ -4,7 +4,6 @@ namespace Eru\SFlash\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\ConfirmableTrait;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 class SFlashCommand extends Command
 {
